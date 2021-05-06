@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet"  href="css/style.css" />
-    <title>G's corporation</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>G's company</title>
     <!-- <link rel="stylesheet" href="css/sample.css"> -->
     <!-- <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/sanitize.css" /> -->
-    
+
     <!-- あらかじめcssを読み込んでいるので設定しなくてOK-->
 </head>
 
 <body>
+    <header class="header">
+        <h1>G's company</h1>
+        <p>We need to make allies. Develop G's company by your hand !</p>
+        <p>Please touch the windows...</p>
+    </header>
     <section class="memoryGame">
-        <!-- <div class="back_building"> -->
+        <!-- <div class="windows"> -->
         <div class="card" data-face="01">
             <img class="front" src="img/front.PNG" alt="f" />
             <img class="back" src="img/01.PNG" alt="b" />
@@ -156,14 +161,21 @@
         <!-- </div> -->
     </section>
 
+    <!-- <div>
+        <p><input type="button" id="reload">aaa</p> 
+        <input type="button" value="このページを再読込します" onclick="window.location.reload();" />
+    </div> -->
+
     <footer class="copyrights">
-        <p>copyrights 2021 G's Corporetion All RIghts Reserved.</p>
+        <p>copyrights 2021 G's Company All RIghts Reserved. Produced by Takuya Miyakawa.</p>
     </footer>
 
-    
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-    <script src=".js/script.js"></script>
+    <!-- $(document).ready(function () {
+            alert($(".card").length);
+        });  -->
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

@@ -34,7 +34,6 @@ function disableCards() {
     first.removeEventListener('click', flipCard);
     second.removeEventListener('click', flipCard);
     resetBoard();
-
 }
 
 function unflipCards() {
@@ -70,3 +69,30 @@ function resetBoard() {
 
 // 一つ一つのカードにイベントリスナーをつけて、「クリック」できる状態にする
 cards.forEach(card => card.addEventListener('click', flipCard));
+
+
+// リロードの設定   →失敗
+// window.location.reload();
+//↑この一文があるだけで何故か無限リロードをしだす...なぜだ？？？
+
+// const reload = document.getElementById('reload');
+// reload.addEventListener('click', function () {
+//     window.location.reload();
+// });
+
+
+////全てめくり終えたらイベント発生させたい！！
+//まずはめくられていないカードクラス "card" をカウントしてみる
+window.onload = function () {
+    const classCount = document.getElementsByClassName('card').length;
+    console.log(classCount);
+//classCountが0に到達したらアラーム出す
+    if (classCount == 0) {
+        alert("congratulations!!");
+    } else {
+    };
+}
+
+
+
+
