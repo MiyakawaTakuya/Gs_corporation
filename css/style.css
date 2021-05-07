@@ -1,0 +1,122 @@
+body{
+	/* font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	line-height: 1.75; */
+	
+	width: 1000px;
+	display: flex;
+	background: rgba(198, 230, 248, 0.425);
+	margin-right: auto;
+    margin-left : auto;
+	justify-content: center;
+	flex-direction: column;
+	align-content: flex-start;
+	/* background-attachment: url(/img/sky.png); */
+	/* z-index: 1; */
+	/* position: absolute;  */
+}
+
+/* パディングをサイズ内側にする処理 */
+* {
+	padding:0;
+	margin:0;
+	box-sizing: border-box;
+}
+
+/*この下から記述*/
+.header {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	/* font-family: Futura PT Light; */
+	font-family:Georgia, 'Times New Roman', Times, serif;
+	font-size: 20px;
+	color: rgba(95, 158, 160, 0.808);
+    /* font-stretch: condensed; */
+    /* font-weight: bold; */
+}
+
+.header h1 {
+	letter-spacing: 0.3em;
+	margin-bottom: 24px;
+}
+
+.memoryGame {
+	width: 1000px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 100px;
+	/* background-image: url("/img/Building.svg"); */
+	/* background-size: cover; */
+	/* z-index: 2; */
+	/* position: relative;  */
+	/* perspective: 1000px;  */
+	/* position: absolute; */
+	
+}
+
+/* .windows {
+	z-index: 10;
+	position: relative;
+	width: 700px;
+	display: flex;
+	flex-wrap: wrap;
+
+	background-color: rgba(137, 43, 226, 0.514);
+}  */
+
+.card {
+	width: 120px;
+	height: 120px;
+	margin: 20px;
+	position: relative;
+	transform: scale(1);
+	transform-style:preserve-3d;  
+	/* backとfrontの入れ替えをうまく処理してる */
+	transition: transform 0.5s;
+
+	/* background-color: rgba(95, 158, 160, 0.678); */
+}
+
+.card:active {
+	transform: scale(0.8);
+	transition: transform 0.2s;
+}
+
+.card.flip {
+	transform: rotateY(180deg);  
+}
+
+.back {
+	transform: rotateY(180deg);  
+}
+
+.back,
+.front {
+	width: 100%;
+	height: 100%;
+	padding: 5px;
+	position: absolute;   /* これがないとカードセレクト時にずれが生じるできない なぜ？ */
+	border-radius: 5px;   
+	background: rgba(176, 192, 196, 0.418); 
+	backface-visibility: hidden;
+}
+
+
+/*copyrights*/
+.copyrights {
+	/* margin-top: 1300px; */
+	color: rgba(95, 158, 160, 0.808);
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;  
+}
+
+
+
+
+
+
